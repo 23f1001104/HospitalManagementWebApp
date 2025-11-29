@@ -153,17 +153,6 @@ APPOINTMENT RULES
 
 ------------------------------------------------------------
 
-IMPORTANT NOTES
-
-- Passwords are stored in plain text (not secure)
-- No authentication middleware
-- No role protection in URLs
-- No form validation
-- No CSRF protection
-- This project is NOT production ready
-- For educational and academic purposes only
-
-------------------------------------------------------------
 
 PURPOSE
 
@@ -175,6 +164,7 @@ This project is designed for:
 - College project usage
 
 ------------------------------------------------------------
+
 
 
 
