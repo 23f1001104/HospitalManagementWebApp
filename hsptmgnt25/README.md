@@ -176,9 +176,6 @@ This project is designed for:
 
 ------------------------------------------------------------
 
-LICENSE
 
-Free to use for educational and personal learning purposes.
 
-------------------------------------------------------------
 
