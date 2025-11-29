@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Doctor Availability</title>
+      
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+      <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+      <div class="top" style="text-align: center; width: 80%; margin: auto; margin-top: 10px;">
+      <h2>Doctor Availability</h2 >
+      </div>
+      <table class="table table-columns" style="width: 80%; margin: auto;">
+    <thead>
+      <tr>
+        <th>Doctor Name</th>
+        <th>Day</th>
+        <th>Morning</th>
+        <th>Afternoon</th>
+        <th>Evening</th>
+        <th>Night</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for doctor in doctors_availability %}
+      <tr>
+        <td>{{ doctor[2] }}</td>
+        <td>{{ doctor[3] }}</td>
+        <!-- morning -->
+        <td> {% if doctor[4] == 1 %} <form method="POST" action="{{ url_for('booking')}}">       <input type="hidden" name="day" value="{{ doctor[3] }}"> <input type="hidden" name="doctor_id" value="{{ doctor[1] }}"> <input type="hidden" name="slot" value="morning"><button class="btn btn-primary btn-sm">Book</button> </form>{% else %}--- {% endif %}</td> 
+        <td>{% if doctor[5] == 1 %} <form method="POST" action="{{ url_for('booking')}}">       <input type="hidden" name="day" value="{{ doctor[3] }}"> <input type="hidden" name="doctor_id" value="{{ doctor[1] }}"><input type="hidden" name="slot" value="afternoon"><button class="btn btn-primary btn-sm">Book</button> </form>{% else %}--- {% endif %}</td>
+        <td>{% if doctor[6] == 1 %} <form method="POST" action="{{ url_for('booking')}}">       <input type="hidden" name="day" value="{{ doctor[3] }}"> <input type="hidden" name="doctor_id" value="{{ doctor[1] }}"><input type="hidden" name="slot" value="evening"><button class="btn btn-primary btn-sm">Book</button> </form>{% else %}--- {% endif %}</td>
+        <td>{% if doctor[7] == 1 %} <form method="POST" action="{{ url_for('booking')}}">       <input type="hidden" name="day" value="{{ doctor[3] }}"> <input type="hidden" name="doctor_id" value="{{ doctor[1] }}"><input type="hidden" name="slot" value="night"><button class="btn btn-primary btn-sm">Book</button> </form>{% else %}--- {% endif %}</td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+
+  </body>
+  </html>

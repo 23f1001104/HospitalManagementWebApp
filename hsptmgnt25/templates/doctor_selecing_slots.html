@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>slots</title>
+</head>
+<body>
+  <div class="select_slot">
+
+<form method="POST">   <!-- YOU WERE MISSING THIS -->
+    <input type="hidden" name="appointment_id" value="{{ appointment_id }}">
+
+    <div class="mb-3">
+      {% for day in ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"] %}
+      <div class="d-flex align-items-center mb-2">
+        <input type="checkbox" class="form-check-input me-2" name="day_{{day}}" id="{{day}}" value="1">
+        <label for="{{day}}" class="me-3">{{day}}</label>
+
+        <select class="form-select w-auto" name="slot_{{day}}">
+          <option value="">Select</option>
+          <option value="morning">Morning:6–12</option>
+          <option value="afternoon">Afternoon:12–6</option>
+          <option value="evening">Evening:6–12</option>
+          <option value="night">Night:12–6</option>
+        </select>
+      </div>
+      {% endfor %}
+      <div class="final_slot">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+</form>
+</div>
+</body>
+</html>

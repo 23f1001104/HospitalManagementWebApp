@@ -1,0 +1,126 @@
+body {
+    background-color:  #8CA9FF;
+    font-family: Arial, sans-serif;
+}
+
+
+.login{
+  background-color: #FFF8DE;
+  width: fit-content;
+  border-radius: 2%;
+  text-align: center;
+  margin: auto;
+  margin-top: 15%;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  border: solid 1px black;
+
+}
+.custom_btn{
+  font-size: 20px;
+  border-radius: 10%;
+  background-color: #8CA9FF;
+  border: solid 1px black;
+}
+
+.register{
+  background-color: #FFF8DE;
+  width: 25%;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  margin-top: 15%;
+}
+.custom_btn2{
+  font-size: 20px;
+  border-radius: 5%;
+  background-color: #8CA9FF;
+  border: solid 1px black;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+ .input {
+ /* background-color: red; */
+ width: 80%;
+ /* height: 40px; */
+  font-size: 20px;
+
+}
+.adddoctor{
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.custom2{
+  /* background-color: red; */
+  background-color: #8CA9FF;
+
+  margin-bottom: 2.5%;
+}
+
+.department{
+  text-align: center;
+  font-size: 18px;
+}
+
+.doctor{
+  background-color: #8CA9FF;
+  text-align: center;
+}
+.selectslot{
+  width: fit-content;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.select_slot{
+  border: 2px solid black;
+  background-color: #FFF8DE;
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  padding-top: 2%;  
+}
+
+.final_slot{
+  /* background-color: red; */
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.patient_history{
+  /* background-color: red; */
+  margin-top: 5%;
+}
+
+
+.update_patient{
+  background-color: white;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  font-size: 20px;
+  border-radius: 2%;
+}
+
+.update_da_patient{
+  background-color: #8CA9FF;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 1px solid black;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+
+.edit_doctor{
+  /* border: 2px solid black; */
+  text-align: center;
+}

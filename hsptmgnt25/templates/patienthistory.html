@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Patient History</title>
+</head>
+<body>
+    <div class="patient_history">
+    
+
+    <table class="table" style="width: 80%; margin: auto;">
+        <thead>
+            <tr>    
+                <th>Doctor ID</th>
+                <th>Patient ID</th>
+                <th>Doctor Name</th>
+                <th>Patient Name</th>
+                <th>Department</th>
+                <th>Date</th>
+                <th>Doctor Response</th>
+                <th>Test Done</th>
+                <th>Medicines</th>
+                <th>Diagnosis</th>
+                <th>Prescription</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for h in history %}
+            <tr>
+                <td>{{h[2]}}</td>
+                <td>{{h[3]}}</td>
+                <td>{{h[4]}}</td>
+                <td>{{h[5]}}</td>
+                <td>{{h[6]}}</td>
+
+
+                <td>{{h[12]}}</td>
+                <td>{{h[7]}}</td>
+                <td>{{h[8]}}</td>
+                <td>{{h[9]}}</td>
+                <td>{{h[10]}}</td>
+                <td>{{h[11]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>

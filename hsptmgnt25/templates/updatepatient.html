@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Update Patient History</title>
+</head>
+
+<body>
+    <div class="update_patient">
+        <br>
+        <form method="POST" action="/update_patient_history/{{ appointment_id }}">
+            <div>
+                <label>Doctor Response:</label>
+                <label>
+                    <input type="radio" name="doctor_response" value="Cancelled" required>
+                    Cancelled
+                </label>
+                <label>
+                    <input type="radio" name="doctor_response" value="Completed" required>
+                    Completed
+                </label>
+            </div>
+<br>
+            <div>
+                <label for="test_done">Test Done:</label><br>
+                <textarea name="test_done" id="test_done" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <label for="medicines">Medicines:</label><br>
+                <textarea name="medicines" id="medicines" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <label for="diagnosis">Diagnosis:</label><br>
+                <textarea name="diagnosis" id="diagnosis" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <label for="prescription">Prescription:</label><br>
+                <textarea name="prescription" id="prescription" rows="4" cols="50"></textarea>
+            </div>
+            
+                <button class="update_da_patient" type="submit">Submit</button>
+            
+        </form>
+    </div>
+</body>
+
+</html>

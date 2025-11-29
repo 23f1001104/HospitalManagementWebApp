@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Edit Patient Info</title>
+</head>
+<body>
+    <h2>Edit Patient Information</h2>
+    
+    <p><strong>Current Name:</strong> {{ patient[1] }}</p>
+    <p><strong>Current Email:</strong> {{ patient[2] }}</p>
+    <hr>
+    
+    <form method="POST">
+        <label>New Full Name (leave blank to keep current):</label>
+        <input type="text" name="fullname" placeholder="Enter new name or leave blank">
+        <br><br>
+        
+        <label>New Email (leave blank to keep current):</label>
+        <input type="email" name="email" placeholder="Enter new email or leave blank">
+        <br><br>
+        
+        <button type="submit">Update Patient</button>
+    </form>
+</body>
+</html>

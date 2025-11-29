@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="p-4">
+    <div class="edit_doctor">
+        <h2>Edit Doctor Details</h2>
+
+        <!-- SHOW CURRENT VALUES -->
+        <div
+            style="margin: auto; width: 80%; background: #f0f0f0; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+            <h5>Current Values:</h5>
+            <p><strong>Email:</strong> {{ doctor[0] }}</p>
+            <p><strong>Department:</strong> {{ doctor[1] }}</p>
+            <p><strong>Bio:</strong> {{ doctor[2] or "No bio available" }}</p>
+        </div>
+
+        <form style="margin: auto; width: 80%;" method="POST">
+
+            <!-- EMAIL -->
+            <div class="mb-2">
+                <label for="email" class="form-label">New Email (leave blank to keep current)</label>
+                <input name="email" type="email" class="form-control" id="email"
+                    placeholder="Enter new email or leave blank">
+            </div>
+
+            <!-- DEPARTMENT -->
+            <div class="mb-2">
+                <label for="department" class="form-label">New Department (leave default to keep current)</label>
+                <select class="form-select" name="department" id="department">
+                    <option selected disabled>Select Department</option>
+                    <option value="Ophthalmology">Ophthalmology</option>
+                    <option value="Gynecology">Gynecology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="ENT">ENT</option>
+                </select>
+            </div>
+
+            <!-- SLOTS -->
+            <div class="mb-2">
+                <label class="form-label">Update Availability (check days and select slots):</label>
+                {% for day in ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"] %}
+                <div class="d-flex align-items-center mb-2">
+                    <input type="checkbox" class="form-check-input me-2" name="day_{{day}}" id="{{day}}" value="1">
+                    <label for="{{day}}" class="me-3">{{day}}</label>
+                    <select class="form-select w-auto" name="slot_{{day}}">
+                        <option value="">Select</option>
+                        <option value="morning">Morning: 6 AM – 12 PM</option>
+                        <option value="afternoon">Afternoon: 12 PM – 6 PM</option>
+                        <option value="evening">Evening: 6 PM – 12 AM</option>
+                        <option value="night">Night: 12 AM – 6 AM</option>
+                    </select>
+                </div>
+                {% endfor %}
+                <small class="text-muted">Note: Availability will be completely replaced with your new selection</small>
+            </div>
+
+            <!-- BIO -->
+            <div class="mb-2">
+                <label for="bio" class="form-label">New Bio (leave blank to keep current)</label>
+                <textarea name="bio" class="form-control" id="bio" rows="3"
+                    placeholder="Enter new bio or leave blank"></textarea>
+            </div>
+
+            <div class="text-center" style="margin-top: 5px; margin-bottom: 5px;"><button type="submit" class="btn btn-primary">Save Changes</button></div>
+        </form>
+    </div>
+</body>
+
+</html>

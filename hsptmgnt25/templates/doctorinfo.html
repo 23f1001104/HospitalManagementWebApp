@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>About Doctor</title>
+</head>
+<body>
+    <div class="card mx-auto my-4" style="width: 24rem; border: 1px solid black;">
+  <div class="card-body">
+    <h5 class="card-title text-center mb-3">Doctor Details</h5>
+
+    <div class="row mb-2">
+      <div class="col-6 fw-bold">Name:</div>
+      <div class="col-6 ">{{doctor_name}}</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-6 fw-bold">Department:</div>
+      <div class="col-6 ">{{doctor_department}}</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-6 fw-bold">Email:</div>
+      <div class="col-6 ">{{doctor_email}}</div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-6 fw-bold">Bio:</div>
+      <div class="col-6  text-success">{{doctor_bio}}</div>
+    </div>
+</div>
+</body>
+</html>

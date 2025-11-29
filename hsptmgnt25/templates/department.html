@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{department}}</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="department">
+    <h2>Department of {{department}}</h2>
+    <p>{{ bio }}</p>
+    <h3>Doctor List</h3>
+    <table class="table" style="width:80%; margin: auto;">
+      <thead>
+        <tr>
+          <th style="width:80%;">Doctor Name</th>
+          <th style="width:10%;">Availability</th>
+          <th style="width:10%;">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for doctor in doctors %}
+        <tr>
+          <td>{{ doctor[1] }}</td>
+          <td><button type="button" class="btn btn-primary"
+              onclick="window.location.href='/doctor_availability/{{ doctor[0]}}'">Availability</button></td>
+          <td><button type="button" class="btn btn-warning"
+              onclick="window.location.href='/doctorinfo/{{ doctor[0] }}'">Details</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
