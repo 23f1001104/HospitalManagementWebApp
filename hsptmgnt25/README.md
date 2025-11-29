@@ -41,12 +41,14 @@ TECH STACK
 
 ------------------------------------------------------------
 
-PROJECT STRUCTURE
+## PROJECT STRUCTURE
 
+```text
 project/
 │
 ├── app.py
 ├── hospital.db
+├── requirements.txt
 │
 ├── templates/
 │   ├── login.html
@@ -70,6 +72,7 @@ project/
 │   └── changes_by_patient.html
 │
 └── static/
+```
 
 ------------------------------------------------------------
 
@@ -178,3 +181,4 @@ LICENSE
 Free to use for educational and personal learning purposes.
 
 ------------------------------------------------------------
+
